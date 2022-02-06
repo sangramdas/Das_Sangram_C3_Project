@@ -77,5 +77,14 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
+    //<<<<<<<<<<<<<<<<<<<<<<<TDD to check order value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void choosing_items_from_menu_should_return_order_value(){
+        restaurant_details_for_testcases();
+        List<String> chosenItems = new ArrayList<String>();
+        chosenItems.add("Sweet corn soup");
+        chosenItems.add("Vegetable lasagne");
+        assertEquals(388,restaurant.getOrderValue(chosenItems));
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<TDD to check order value>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
